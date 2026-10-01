@@ -15,6 +15,7 @@ export default function Header(){
                     <li><Link className={styles.navLink} href='/'>Início</Link></li>
                     <li><Link className={styles.navLink} href='/cadaluno'> Cadastro Turmas</Link></li>
                     <li><Link className={styles.navLink} href='/listaluno'>Pesagem</Link></li>
+                    <li><Link className={styles.navLink} href='/semaforo'>Semáforo</Link></li>
 
                 </ul>
                 </nav>

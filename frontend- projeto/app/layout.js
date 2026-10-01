@@ -1,5 +1,13 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+
+<nav>
+    <Link href="/">Início</Link>
+    <Link href="/listaluno">Cadastro Turmas</Link>
+    <Link href="/notaluno">Pesagem</Link>
+    <Link href="/semaforo">Semáforo</Link>
+</nav>
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
