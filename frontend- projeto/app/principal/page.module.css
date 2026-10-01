@@ -1,0 +1,64 @@
+.page { min-height: 100vh; background: #f7f8fa; }
+
+.main {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 72px);
+  padding: clamp(32px, 6vw, 72px) 24px 80px;
+  background: radial-gradient(circle at 85% 12%, #fff0f1 0, transparent 28%), #f7f8fa;
+}
+
+.dashboard { width: min(1180px, 100%); margin: 0 auto; }
+
+.content {
+  position: relative;
+  min-height: 390px;
+  padding: clamp(42px, 7vw, 82px);
+  overflow: hidden;
+  color: #ffffff;
+  border-radius: 16px;
+  background: linear-gradient(125deg, #740a15 0%, #ad1320 62%, #d32a37 100%);
+  box-shadow: 0 20px 45px rgba(91, 11, 20, 0.18);
+}
+
+.content::after {
+  position: absolute;
+  right: -90px;
+  bottom: -140px;
+  width: 420px;
+  height: 420px;
+  border: 70px solid rgba(201, 21, 36, 0.9);
+  content: "";
+  transform: rotate(18deg);
+}
+
+.content > * { position: relative; z-index: 1; }
+
+.content h2 {
+  max-width: 720px;
+  margin: 15px 0 20px;
+  font-size: clamp(2rem, 5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.content p { max-width: 520px; color: rgba(255, 255, 255, 0.78); font-size: 1.05rem; line-height: 1.7; }
+
+.eyebrow { color: #ffbdc2; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.16em; }
+.heroMark { position: absolute; right: 15%; bottom: 22%; color: rgba(255, 255, 255, 0.2); font-size: 8rem; line-height: 0.5; transform: rotate(-12deg); }
+
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
+.statCard { display: flex; align-items: center; gap: 14px; min-height: 104px; padding: 20px; background: #ffffff; border: 1px solid #e8e9ed; border-radius: 14px; box-shadow: 0 10px 28px rgba(24, 27, 34, 0.06); }
+.statIcon { display: grid; flex: 0 0 38px; place-items: center; width: 38px; height: 38px; color: #c91524; background: #fff0f1; border-radius: 11px; font-size: 1.15rem; font-weight: 900; }
+.alertIcon { color: #9a6500; background: #fff6da; }
+.statCard div { display: grid; gap: 5px; }
+.statLabel { color: #69707c; font-size: 0.76rem; font-weight: 700; }
+.statCard strong { color: #17191d; font-size: 1.18rem; }
+
+@media (max-width: 600px) {
+  .main { min-height: calc(100vh - 135px); padding: 28px 16px 48px; }
+  .content { min-height: 440px; padding: 40px 28px; border-radius: 14px; }
+  .content::after { right: -180px; bottom: -170px; }
+  .heroMark { right: 4%; bottom: 14%; }
+  .stats { grid-template-columns: 1fr; }
+}
